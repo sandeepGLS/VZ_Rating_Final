@@ -643,7 +643,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             if (callFor.equals(CallFor.PROVIDER_LIST)) {
                 prov_list = new Gson().fromJson(response,String[].class);
-
                 // Store the Provider List in SharedPreferences
                 SharedPreferences prefs = this.getSharedPreferences("LIST",0);
                 SharedPreferences.Editor edit = prefs.edit();
