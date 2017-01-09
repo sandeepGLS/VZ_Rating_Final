@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vztrack.gls.com.vztrack_user">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name=".permission.RECEIVE" />
+
+    <uses-permission android:name="vztrack.gls.com.vztrack_user.permission.C2D_MESSAGE" />
+    <permission android:name="vztrack.gls.com.vztrack_user.permission.C2D_MESSAGE"
+    android:protectionLevel="signature" />
+
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/user_app_logo"
+        android:label="@string/title"
+        android:supportsRtl="true"
+        android:largeScreens="true"
+        tools:node="replace"
+        android:theme="@style/AppTheme"
+        android:name="com.clevertap.android.sdk.Application">
+
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="@string/clever_tap_id"/>
+
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="@string/clever_tap_tokan"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <activity android:name=".LoginScreenActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation = "portrait">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title"
+            android:theme="@style/Theme.Transparent"
+            android:screenOrientation = "portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Visiters_Details"
+            android:label="@string/title_activity_visiters__details"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation = "portrait"/>
+        <activity
+            android:name=".Notice_DetailsActivity"
+            android:label="@string/title_activity_notice__details"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation = "portrait"/>
+        <activity android:name=".NoInternetConnection"
+            android:screenOrientation = "portrait"></activity>
+        <activity android:name=".RatingActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation = "portrait">
+        </activity>
+        <activity android:name=".Provider_Details"
+            android:screenOrientation = "portrait"></activity>
+        <activity
+            android:name="za.co.riggaroo.materialhelptutorial.tutorial.MaterialTutorialActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+
+
+        <service
+            android:name="vztrack.gls.com.vztrack_user.gcm.PushNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="vztrack.gls.com.vztrack_user" />
+            </intent-filter>
+        </receiver>
+
+
+
+
+    </application>
+</manifest>

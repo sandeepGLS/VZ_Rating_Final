@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="Share">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_share"/>
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:onClick="ShowPhoto"
+                android:src="@drawable/no_photo_icon"
+                android:id="@+id/imgProviderPhoto"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mayur Sabale"
+            android:textSize="25dp"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:layout_alignTop="@+id/circleView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/tvVisitorName"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvVisitPurpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:text="Elecrician"
+                    android:layout_marginTop="2dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProvidersMobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:text="8984568320"
+                    android:onClick="Call"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="Call"
+                    android:src="@drawable/call"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:padding="2dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:text="Ratings"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"/>
+
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:layout_below="@+id/View1">
+
+                    <LinearLayout
+                        android:id="@+id/linearSocRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:weightSum="4"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <mehdi.sakout.fancybuttons.FancyButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_margin="2dp"
+                                android:onClick="Next"
+                                fancy:fb_borderColor="#3b5998"
+                                fancy:fb_borderWidth="1dp"
+                                fancy:fb_defaultColor="@color/colorButton"
+                                fancy:fb_radius="5dp"
+                                fancy:fb_text="Society Rating"
+                                fancy:fb_textColor="#FFFFFF"
+                                fancy:fb_iconPosition="right"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.2"
+                                        android:gravity="left"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:text="Quality"/>
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible"
+                                        android:layout_weight="0.3"/>
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/qualitySocRating"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:maxHeight="17dp"
+                                        android:minHeight="17dp"
+                                        android:layout_weight="2.4"
+                                        android:layout_marginLeft="-12dp"
+                                        android:layout_marginRight="-12dp"
+                                        android:rating="0"
+                                        android:stepSize="1"
+                                        android:isIndicator="true"
+                                        app:mrb_progressTint="@color/slide_2"
+                                        app:mrb_secondaryProgressTint="@color/slide_2"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.2"
+                                        android:gravity="left"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:text="Price"/>
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible"
+                                        android:layout_weight="0.3"/>
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/priceSocRating"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="17dp"
+                                        android:maxHeight="17dp"
+                                        android:layout_weight="2.4"
+                                        android:layout_marginLeft="-12dp"
+                                        android:layout_marginRight="-12dp"
+                                        android:rating="0"
+                                        android:stepSize="1"
+                                        android:isIndicator="true"
+                                        app:mrb_progressTint="@color/slide_2"
+                                        app:mrb_secondaryProgressTint="@color/slide_2"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.2"
+                                        android:gravity="left"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:text="Punctuality"/>
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible"
+                                        android:layout_weight="0.3"/>
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/punctualitySocRating"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:maxHeight="17dp"
+                                        android:minHeight="17dp"
+                                        android:layout_weight="2.4"
+                                        android:layout_marginLeft="-12dp"
+                                        android:layout_marginRight="-12dp"
+                                        android:rating="0"
+                                        android:stepSize="1"
+                                        android:isIndicator="true"
+                                        app:mrb_progressTint="@color/slide_2"
+                                        app:mrb_secondaryProgressTint="@color/slide_2"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <mehdi.sakout.fancybuttons.FancyButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="2dp"
+                            android:onClick="Next"
+                            fancy:fb_borderColor="#3b5998"
+                            fancy:fb_borderWidth="1dp"
+                            fancy:fb_defaultColor="#FFFFFF"
+                            fancy:fb_focusColor="#5577bd"
+                            fancy:fb_radius="4dp"
+                            fancy:fb_text="Over All Rating"
+                            fancy:fb_textColor="#3b5998"
+                            fancy:fb_fontIconResource="&#xf061;"
+                            fancy:fb_fontIconSize="17sp"
+                            fancy:fb_iconPosition="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearAllRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:weightSum="4"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <mehdi.sakout.fancybuttons.FancyButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:onClick="Next"
+                                fancy:fb_borderColor="#3b5998"
+                                fancy:fb_borderWidth="1dp"
+                                fancy:fb_defaultColor="@color/colorButton"
+                                fancy:fb_radius="5dp"
+                                fancy:fb_text="Over All Rating"
+                                fancy:fb_textColor="#FFFFFF"
+                                fancy:fb_iconPosition="right"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.2"
+                                        android:gravity="left"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:text="Quality"/>
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible"
+                                        android:layout_weight="0.3"/>
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/qualityAllRating"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="17dp"
+                                        android:maxHeight="17dp"
+                                        android:layout_marginLeft="-12dp"
+                                        android:layout_marginRight="-12dp"
+                                        android:layout_weight="2.4"
+                                        android:rating="0"
+                                        android:stepSize="1"
+                                        android:isIndicator="true"
+                                        app:mrb_progressTint="@color/slide_2"
+                                        app:mrb_secondaryProgressTint="@color/slide_2"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.2"
+                                        android:gravity="left"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:text="Price"/>
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible"
+                                        android:layout_weight="0.3"/>
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/priceAllRating"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="17dp"
+                                        android:maxHeight="17dp"
+                                        android:layout_weight="2.4"
+                                        android:layout_marginLeft="-12dp"
+                                        android:layout_marginRight="-12dp"
+                                        android:rating="0"
+                                        android:stepSize="1"
+                                        android:isIndicator="true"
+                                        app:mrb_progressTint="@color/slide_2"
+                                        app:mrb_secondaryProgressTint="@color/slide_2"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:weightSum="4"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.2"
+                                        android:gravity="left"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:text="Punctuality"/>
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible"
+                                        android:layout_weight="0.3"/>
+
+                                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                        android:id="@+id/punctualityAllRating"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:maxHeight="17dp"
+                                        android:minHeight="17dp"
+                                        android:layout_weight="2.4"
+                                        android:layout_marginLeft="-12dp"
+                                        android:layout_marginRight="-12dp"
+                                        android:rating="0"
+                                        android:stepSize="1"
+                                        android:isIndicator="true"
+                                        app:mrb_progressTint="@color/slide_2"
+                                        app:mrb_secondaryProgressTint="@color/slide_2"
+                                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <mehdi.sakout.fancybuttons.FancyButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="2dp"
+                            android:onClick="Next"
+                            fancy:fb_borderColor="#3b5998"
+                            fancy:fb_borderWidth="1dp"
+                            fancy:fb_defaultColor="#FFFFFF"
+                            fancy:fb_focusColor="#5577bd"
+                            fancy:fb_radius="4dp"
+                            fancy:fb_text="Society Rating"
+                            fancy:fb_textColor="#3b5998"
+                            fancy:fb_fontIconResource="&#xf061;"
+                            fancy:fb_fontIconSize="17sp"
+                            fancy:fb_iconPosition="right"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="2dp"
+        android:padding="2dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:text="Reviews / Comments"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/commetsList_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-3dp"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>

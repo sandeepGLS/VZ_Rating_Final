@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:background="@drawable/edit_text_bg">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_providers_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.AppCompatSpinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <com.github.lguipeng.library.animcheckbox.AnimCheckBox
+                    android:id="@+id/checkbox_quality"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:text=" Quality"
+                    app:stroke_width="2dp"
+                    app:stroke_color="@color/colorWhite"
+                    app:circle_color="@android:color/holo_green_dark"/>
+
+                <TextView
+                    android:id="@+id/tvQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:text="Quality"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <com.github.lguipeng.library.animcheckbox.AnimCheckBox
+                    android:id="@+id/checkbox_price"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:text=" Quality"
+                    app:stroke_width="2dp"
+                    app:stroke_color="@color/colorWhite"
+                    app:circle_color="@android:color/holo_green_dark"/>
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:text="Price"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.github.lguipeng.library.animcheckbox.AnimCheckBox
+                    android:id="@+id/checkbox_punctuality"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:text=" Quality"
+                    app:stroke_width="2dp"
+                    app:stroke_color="@color/colorWhite"
+                    app:circle_color="@android:color/holo_green_dark"/>
+
+                <TextView
+                    android:id="@+id/tvPunctuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:text="Punctuality"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvNearBySoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:textColor="@color/colorWhite"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="Near By Societies"/>
+
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switch_btn"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:kswBackMeasureRatio="2.6"
+                app:kswBackRadius="2dp"
+                app:kswThumbRadius="2dp"
+                app:kswTintColor="@android:color/holo_green_dark"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_provider_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/TvNoProvider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="No Provider Found !"/>
+
+</LinearLayout>

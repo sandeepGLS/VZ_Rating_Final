@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#2879FE</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorButton">#1F96F2</color>
+    <color name="colorView">#E0E0E0</color>
+    <color name="colorViewLong">#B3B3B3</color>
+    <color name="colorSmallText">#01579B</color>
+    <color name="colorBlack">#000000</color>
+    <color name="tint">#f44336</color>
+
+    <color name="slide_1">#4f91ff</color>
+    <color name="slide_2">#fb9c25</color>
+    <color name="slide_3">#5ab55d</color>
+    <color name="slide_4">#ea2d6d</color>
+    <color name="tutorial_buttonTextColor">#000000</color>
+
+</resources>

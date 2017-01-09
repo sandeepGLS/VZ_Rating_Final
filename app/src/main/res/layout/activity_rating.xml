@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/colorBackground"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/no_photo_icon"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:id="@+id/imgVisitorPhoto"
+                    android:layout_toLeftOf="@+id/imageView"
+                    android:layout_toStartOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/tvVisitorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:scrollHorizontally="true"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:focusable="true"
+                    android:textStyle="bold"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:text="Mayur Kumar Mane Saheb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:textSize="17dp"
+                        android:text="Mobile. No. : "/>
+
+                    <TextView
+                        android:id="@+id/tvMobileNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="17dp"
+                        android:text="7845568952"/>
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:onClick="Call"
+                        android:visibility="gone"
+                        android:src="@drawable/call"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:text="Purpose :"/>
+
+                        <TextView
+                            android:id="@+id/tvPurpose"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="center"
+                            android:text="Elecrician"
+                            android:textSize="17dp"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit ="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/View1"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/colorWhite" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="17dp"
+                            android:text="Date :"/>
+
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="center"
+                            android:text="15 Dec 2016"
+                            android:textSize="17dp"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit ="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="4"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.3"
+                                android:gravity="left"
+                                android:textSize="15dp"
+                                android:textColor="@color/colorBlack"
+                                android:text="Quality"/>
+
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/qualityRating"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginRight="-12dp"
+                                android:rating="0"
+                                android:layout_weight="2.7"
+                                android:stepSize="1"
+                                app:mrb_progressTint="@color/slide_2"
+                                app:mrb_secondaryProgressTint="@color/slide_2"
+                                style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                            <ImageView
+                                android:id="@+id/img_qua_happy"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_emoji_happy"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/img_qua_sad"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_emoji_sad"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="4"
+                            android:padding="1dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.3"
+                                android:gravity="left"
+                                android:textSize="15dp"
+                                android:textColor="@color/colorBlack"
+                                android:text="Price"
+                                android:id="@+id/textView5" />
+
+
+
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/priceRating"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginRight="-12dp"
+                                android:rating="0"
+                                android:layout_weight="2.7"
+                                android:stepSize="1"
+                                app:mrb_progressTint="@color/slide_2"
+                                app:mrb_secondaryProgressTint="@color/slide_2"
+                                style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                            <ImageView
+                                android:id="@+id/img_pri_happy"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_emoji_happy"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/img_pri_sad"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_emoji_sad"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="4"
+                            android:padding="1dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.3"
+                                android:gravity="left"
+                                android:textSize="15dp"
+                                android:textColor="@color/colorBlack"
+                                android:text="Punctuality"/>
+
+
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/punctualityRating"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-12dp"
+                                android:layout_marginRight="-12dp"
+                                android:rating="0"
+                                android:layout_weight="2.7"
+                                android:stepSize="1"
+                                app:mrb_progressTint="@color/slide_2"
+                                app:mrb_secondaryProgressTint="@color/slide_2"
+                                style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+                            <ImageView
+                                android:id="@+id/img_pun_happy"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_emoji_happy"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/img_pun_sad"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_emoji_sad"
+                                android:layout_marginRight="-2dp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/etComment"
+                            android:layout_width="match_parent"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="60dp"
+                            android:maxLines="2"
+                            android:padding="3dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="left"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="Comment (optional)"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1">
+
+                                <mehdi.sakout.fancybuttons.FancyButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:onClick="NotInterested"
+                                    fancy:fb_borderColor="#FFFFFF"
+                                    fancy:fb_borderWidth="1dp"
+                                    fancy:fb_defaultColor="#5577bd"
+                                    fancy:fb_focusColor="#3b5998"
+                                    fancy:fb_radius="5dp"
+                                    fancy:fb_text="Skip"
+                                    fancy:fb_textColor="#FFFFFF"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1">
+
+                                <mehdi.sakout.fancybuttons.FancyButton
+                                    android:id="@+id/btn_facebook_like"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:onClick="Submit"
+                                    fancy:fb_borderColor="#FFFFFF"
+                                    fancy:fb_borderWidth="1dp"
+                                    fancy:fb_defaultColor="#7ab800"
+                                    fancy:fb_focusColor="#9bd823"
+                                    fancy:fb_radius="5dp"
+                                    fancy:fb_text="SUBMIT"
+                                    fancy:fb_fontIconResource="&#xf087;"
+                                    fancy:fb_fontIconSize="16sp"
+                                    fancy:fb_iconPosition="right"
+                                    fancy:fb_textColor="#FFFFFF"/>
+
+
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

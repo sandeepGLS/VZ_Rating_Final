@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit Purpose "
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvPurpose"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvWhome"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginLeft="5dp"
+                android:text="Meeting"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/tvVisitors"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="( total visitors 2 )"
+                android:gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="1dp"/>
+        </LinearLayout>
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@+id/tvPurpose"
+        android:background="@color/colorViewLong"/>
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorSmallText"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:paddingBottom="3dp"
+            android:text="In Time"
+            android:layout_below="@+id/View1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1px"
+            android:layout_marginBottom="1px"
+            android:layout_below="@+id/tvPurpose"
+            android:background="@color/colorView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvDateAndTime">
+
+    <TextView
+        android:id="@+id/tvVehicleno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorSmallText"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:paddingBottom="3dp"
+        android:text="Vehicle Number"/>
+
+    <TextView
+        android:id="@+id/tvfrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorSmallText"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:paddingBottom="3dp"
+        android:text="From"/>
+
+    </LinearLayout>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1px"
+            android:layout_marginBottom="1px"
+            android:layout_below="@+id/tvPurpose"
+            android:background="@color/colorView"/>
+        <TextView
+            android:id="@+id/tvOutTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorSmallText"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:paddingBottom="3dp"
+            android:text="Out Time"
+            android:layout_below="@+id/View1"/>
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
