@@ -1,0 +1,19 @@
+<Context path="ROOT" debug="5" reloadable="true" crossContext="true">
+
+<!-- <Resource name="jdbc/vz" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+        username="janta" password="eclipse12" driverClassName="com.mysql.jdbc.Driver"
+ url="jdbc:mysql://janta.c0hsgbbajbtv.ap-southeast-1.rds.amazonaws.com:3306/vz_tracker_test?autoReconnect=true"/> 
+  -->
+ <Resource 
+	 name="jdbc/vz" 
+	 auth="Container" 
+	 type="javax.sql.DataSource" 
+	 maxActive="100" 
+	 maxIdle="30" 
+	 maxWait="10000"
+	 username="janta" 
+	 password="eclipse12" 
+	 driverClassName="com.mysql.jdbc.Driver"
+	 url="jdbc:mysql://janta.c0hsgbbajbtv.ap-southeast-1.rds.amazonaws.com:3306/vz_tracker?autoReconnect=true"/>
+ 
+</Context>

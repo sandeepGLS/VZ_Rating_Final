@@ -1,0 +1,8 @@
+username=root
+password=wpBw1n88nB7c2WD
+url=jdbc:mysql://107.23.124.105:3306/test
+driverName=com.mysql.jdbc.Driver
+insertQuery=insert ignore into HJSC_container_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+insertQuery1=insert ignore into HJSC_container_cargo_detail values(?,?,?,?,?)
+selectQuery=select * from test.HJSC_container_number
+sleepTime=20000
